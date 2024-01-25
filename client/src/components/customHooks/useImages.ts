@@ -13,9 +13,12 @@ const useImages = () => {
 
   const fetchImages = () =>
     axios
-      .get<IImageData[]>("/api", {
-        params: { keyword: keyword },
-      })
+      .get<IImageData[]>(
+        "https://elpachris-obengg-server.vercel.app/api/flickr/photos",
+        {
+          params: { keyword: keyword },
+        }
+      )
       .then((res) => {
         return res.data;
       });
