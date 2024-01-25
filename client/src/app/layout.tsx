@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import TanstackProvider from "@/components/providers/TanstackProvider";
+import ContextProvider from "@/components/providers/ContextProvider";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,9 +16,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body >
+    <TanstackProvider>
+    <ContextProvider>
+    <div className="min-h-screen flex flex-col">
+        <Nav/>
+         <main  className="flex-1">
+           {children} 
+         </main>
+       <Footer/>
+       </div>
+       </ContextProvider>
+    </TanstackProvider>
+        </body>
     </html>
   );
 }
