@@ -9,26 +9,28 @@ react queries for fetching data.
    ```console
     git clone git@github.com:elpah/elpachris-obengg.git
 
-2. install dependencies
+2. install Server dependencies
    ```console
-   cd server
-   npm i
+       cd server
+       npm i
+4. Install Client Dependencies
 
    ```console
-   cd client
-   npm i
+        cd client
+        npm i
+
+5. Start server 
+  in Server directory run
+   ```console
+      npm start
+
+ 6. Start Client
+     in client directory run
+    ```console
+      npm run dev
  
-3. start server and client
-   in Server directory run
-   ```console
-    npm start
 
-  in client directory run
-   ```console
-    npm run dev
- 
-
-4. Open your browser and go to http://localhost:3000
+7. Open your browser and go to http://localhost:3000
 
 **Features**
 - Public Feed Display
